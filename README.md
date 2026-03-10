@@ -1,17 +1,21 @@
-# Modelo de projeto de ciência de dados
+# Modelo de Classificação em base de dados de Câncer de mama
 
-Modelo de projeto de ciência de dados para ser utilizado como referência em projetos
-futuros. Desenvolvido por mim, [Francisco Bustamante](https://github.com/chicolucio),
-para alunos iniciantes em ciência de dados de meus cursos e mentorias.
+Descrição:
+O câncer de mama é o câncer mais comum entre as mulheres no mundo. Ele representa 25% de todos os casos de câncer e afetou mais de 2,1 milhões de pessoas somente em 2015. Começa quando as células da mama começam a crescer descontroladamente. Essas células geralmente formam tumores que podem ser vistos por meio de raio-X ou sentidos como nódulos na região da mama.
 
-Inspiração: [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/)
+O principal desafio na detecção do câncer de mama é como classificar os tumores em malignos (cancerígenos) ou benignos (não cancerígenos).
 
-Clique no botão **Use this template** para criar um novo repositório com base neste modelo.
+Fonte: https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset
+
+
+## Objetivo:
+- Compreender o conjunto de dados e realizar a limpeza.
+- Construa modelos de classificação para prever se o tipo de câncer é maligno ou benigno.
+- Além disso, ajuste os hiperparâmetros e compare as métricas de avaliação de vários algoritmos de classificação.
 
 ## Organização do projeto
 
 ```
-├── .env               <- Arquivo de variáveis de ambiente (não versionar)
 ├── .gitignore         <- Arquivos e diretórios a serem ignorados pelo Git
 ├── ambiente.yml       <- O arquivo de requisitos para reproduzir o ambiente de análise
 ├── LICENSE            <- Licença de código aberto se uma for escolhida
@@ -29,58 +33,11 @@ Clique no botão **Use this template** para criar um novo repositório com base 
 |      │
 |      ├── __init__.py  <- Torna um módulo Python
 |      ├── config.py    <- Configurações básicas do projeto
-|      └── graficos.py  <- Scripts para criar visualizações exploratórias e orientadas a resultados
+|      ├── graficos.py  <- Scripts para criar visualizações exploratórias e orientadas a resultados
+|      └── models.py    <- Scripts para criar modelos e treinar modelos
 |
 ├── referencias        <- Dicionários de dados, manuais e todos os outros materiais explicativos.
 |
 ├── relatorios         <- Análises geradas em HTML, PDF, LaTeX, etc.
 │   └── imagens        <- Gráficos e figuras gerados para serem usados em relatórios
 ```
-
-## Configuração do ambiente
-
-1. Faça o clone do repositório que será criado a partir deste modelo.
-
-    ```bash
-    git clone ENDERECO_DO_REPOSITORIO
-    ```
-
-2. Crie um ambiente virtual para o seu projeto utilizando o gerenciador de ambientes de sua preferência.
-
-    a. Caso esteja utilizando o `conda`, exporte as dependências do ambiente para o arquivo `ambiente.yml`:
-
-      ```bash
-      conda env export > ambiente.yml
-      ```
-
-    b. Caso esteja utilizando outro gerenciador de ambientes, exporte as dependências
-    para o arquivo `requirements.txt` ou outro formato de sua preferência. Adicione o
-    arquivo ao controle de versão, removendo o arquivo `ambiente.yml`.
-
-3. Verifique o arquivo `notebooks/01-fb-exemplo.ipynb` para exemplos
-de uso do código.
-4. Renomeie o arquivo `notebooks/01-fb-exemplo.ipynb` para um nome
-mais apropriado ao seu projeto. E siga a convenção de nomenclatura para os demais
-notebooks.
-5. Remova arquivos de exemplo e adicione os arquivos de dados e notebooks do seu
-projeto.
-6. Verifique o arquivo `notebooks/src/config.py` para configurações básicas do projeto.
-Modifique conforme necessário, adicionando ou removendo caminhos de arquivos e
-diretórios.
-7. Atualize o arquivo `referencias/01_dicionario_de_dados.md` com o dicionário de dados
-do seu projeto.
-8. Atualize o `README.md` com informações sobre o seu projeto.
-9. Adicione uma licença ao projeto. Clique
-[aqui](https://docs.github.com/pt/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
-se precisar de ajuda para escolher uma licença.
-10. Renomeie o arquivo `.env.exemplo` para `.env`
-11. Adicione variáveis de ambiente sensíveis ao arquivo `.env`.
-
-Por padrão, o arquivo `.gitignore` já está configurado para ignorar arquivos de dados e
-arquivos de Notebook (para aqueles que usam ferramentas como
-[Jupytext](https://jupytext.readthedocs.io/en/latest/) e similares). Adicione ou remova
-outros arquivos e diretórios do `.gitignore` conforme necessário. Caso deseje adicionar
-forçadamente um Notebook ao controle de versão, faça um commit forçado com o
-comando `git add --force NOME_DO_ARQUIVO.ipynb`.
-
-Para mais informações sobre como usar Git e GitHub, [clique aqui](https://cienciaprogramada.com.br/2021/09/guia-definitivo-git-github/). Sobre ambientes virtuais, [clique aqui](https://cienciaprogramada.com.br/2020/08/ambiente-virtual-projeto-python/).
