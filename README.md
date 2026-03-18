@@ -1,11 +1,11 @@
 # Modelo de Classificação em base de dados de Câncer de mama
 
-Descrição:
+## Contextualização:
 O câncer de mama é o câncer mais comum entre as mulheres no mundo. Ele representa 25% de todos os casos de câncer e afetou mais de 2,1 milhões de pessoas somente em 2015. Começa quando as células da mama começam a crescer descontroladamente. Essas células geralmente formam tumores que podem ser vistos por meio de raio-X ou sentidos como nódulos na região da mama.
 
 O principal desafio na detecção do câncer de mama é como classificar os tumores em malignos (cancerígenos) ou benignos (não cancerígenos).
 
-Fonte: https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset
+Fonte dos dados: https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset
 
 
 ## Objetivo:
