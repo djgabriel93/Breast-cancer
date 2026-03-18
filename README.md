@@ -1,23 +1,40 @@
-# Modelo de Classificação em base de dados de Câncer de mama
+# Diagnóstico de Câncer de Mama com Machine Learning
 
-## Contextualização:
-O câncer de mama é o câncer mais comum entre as mulheres no mundo. Ele representa 25% de todos os casos de câncer e afetou mais de 2,1 milhões de pessoas somente em 2015. Começa quando as células da mama começam a crescer descontroladamente. Essas células geralmente formam tumores que podem ser vistos por meio de raio-X ou sentidos como nódulos na região da mama.
+Este repositório apresenta um projeto de Ciência de Dados focado na classificação de tumores de mama em **Malignos** ou **Benignos**. O objetivo é aplicar o processo de Machine Learning, desde a análise exploratória até a validação de modelos preditivos, utilizando o ecossistema Scikit-Learn.
 
-O principal desafio na detecção do câncer de mama é como classificar os tumores em malignos (cancerígenos) ou benignos (não cancerígenos).
+## 📊 Sobre o Dataset
 
-Fonte dos dados: https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset
+O projeto utiliza o **Breast Cancer Wisconsin (Diagnostic) Dataset**, disponível no [Kaggle](https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset).
+* **Instâncias:** 569 amostras.
+* **Atributos:** 30 variáveis preditoras numéricas que descrevem características morfológicas das células (raio, textura, perímetro, área, etc.).
+* **Target:** Diagnóstico (M = Maligno, B = Benigno).
 
+## 📂 Estrutura do Projeto
 
-## Objetivo:
-- Compreender o conjunto de dados e realizar a limpeza.
-- Construa modelos de classificação para prever se o tipo de câncer é maligno ou benigno.
-- Além disso, ajuste os hiperparâmetros e compare as métricas de avaliação de vários algoritmos de classificação.
+O desenvolvimento está dividido em notebooks que seguem o fluxo de trabalho de um projeto de ML:
+
+1.  **`01-gd-eda.ipynb` (Análise Exploratória):** Estudo das distribuições, correlações e identificação de atributos chave.
+2.  **`02-gd-metricas.ipynb` e `02-gd-metricas_parte_02.ipynb` (Avaliação de Métricas):** Estudo aprofundado sobre Acurácia, Precisão, Recall, F1-Score e Curva ROC. O foco aqui foi entender o impacto de falsos negativos em um contexto médico, priorizando o **Recall**.
+3.  **`03-gd-modelos.ipynb` (Desenvolvimento de Modelos):** Implementação de pipelines com `PowerTransformer` para normalização e comparação entre algoritmos como `LogisticRegression`, `Perceptron` e `SGDClassifier` utilizando `StratifiedKFold`.
+4.  **`03-gd-modelos_parte_02.ipynb` (Seleção de Atributos):** Utilização de `SelectKBest` com métodos estatísticos (Chi-Quadrado, ANOVA e Informação Mútua) para otimizar a performance e reduzir a dimensionalidade.
+
+## ⚙️ Tecnologias Utilizadas
+
+* **Linguagem:** Python
+* **Manipulação de Dados:** Pandas, NumPy
+* **Visualização:** Matplotlib, Seaborn
+* **Machine Learning:** Scikit-Learn (Modelos, Pipelines, Preprocessing e Metrics)
+
+## 🏆 Resultados
+
+Os modelos de **Regressão Logística** e **Perceptron** apresentaram resultados sólidos, alcançando um **Recall superior a 95%** na validação cruzada. Em diagnósticos médicos, garantir que a maioria dos casos malignos seja detectada (alto Recall) é fundamental para a segurança do paciente.
+
 
 ## Organização do projeto
 
 ```
 ├── .gitignore         <- Arquivos e diretórios a serem ignorados pelo Git
-├── ambiente.yml       <- O arquivo de requisitos para reproduzir o ambiente de análise
+├── breast_cancer.yml       <- O arquivo de requisitos para reproduzir o ambiente de análise
 ├── LICENSE            <- Licença de código aberto se uma for escolhida
 ├── README.md          <- README principal para desenvolvedores que usam este projeto.
 |
